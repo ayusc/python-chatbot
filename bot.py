@@ -24,6 +24,7 @@ try:
     nltk.data.find('corpora/stopwords.zip/stopwords/')
 except LookupError:
     nltk.download('punkt')
+    nltk.download('stopwords')
 
 # Define paths for data storage
 DATA_DIR = "data"
