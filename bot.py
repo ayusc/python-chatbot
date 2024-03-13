@@ -21,6 +21,7 @@ from sklearn.naive_bayes import MultinomialNB
 # Check if punkt tokenizer is available
 try:
     nltk.data.find('tokenizers/punkt')
+    nltk.data.find('corpora/stopwords.zip/stopwords/')
 except LookupError:
     nltk.download('punkt')
 
@@ -97,7 +98,7 @@ def train_chatbot():
 chatbot = Chat(patterns, reflections)
 
 def main():
-    print("Welcome to the chatbot! Type 'quit' to exit.")
+    print("Welcome to the chatbot! Type 'quit' to exit.\n")
     while True:
         user_input = input("You: ")
         update_logs(user_input)
